@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Bubbles Loader</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #3a86ff, #8338ec, #ff006e);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .bubbles-loader {
+      position: relative;
+      width: 120px;
+      height: 120px;
+    }
+
+    .bubbles-loader div {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #fff;
+      border-radius: 50%;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    .bubbles-loader div:nth-child(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: 0s;
+    }
+
+    .bubbles-loader div:nth-child(2) {
+      top: 50%;
+      left: 20%;
+      animation-delay: 0.2s;
+    }
+
+    .bubbles-loader div:nth-child(3) {
+      top: 50%;
+      left: 80%;
+      animation-delay: 0.4s;
+    }
+
+    .bubbles-loader div:nth-child(4) {
+      top: 20%;
+      left: 50%;
+      animation-delay: 0.6s;
+    }
+
+    .bubbles-loader div:nth-child(5) {
+      top: 80%;
+      left: 50%;
+      animation-delay: 0.8s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: scale(0.8) translate(-50%, -50%);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.2) translate(-50%, -50%);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.8) translate(-50%, -50%);
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bubbles-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
